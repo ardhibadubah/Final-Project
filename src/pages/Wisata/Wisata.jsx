@@ -26,6 +26,7 @@ export default function Wisata() {
     <>
       <Default>
         <Container>
+
           {isLoading ? (
             <div className='w-100 vh-100 d-flex justify-content-center align-items-center'>
               <Spinner animation='border' role='status'>
@@ -37,6 +38,10 @@ export default function Wisata() {
               <CardHorizontal data={dataWisata} />
             </div>
           )}
+
+          <div className="d-flex flex-column align-items-center">
+            <CardHorizontal data={dataWisata} />
+          </div>
         </Container>
       </Default>
     </>
