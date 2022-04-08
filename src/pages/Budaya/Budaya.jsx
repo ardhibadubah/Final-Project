@@ -1,11 +1,15 @@
 import React from "react";
-import Default from "../../layout/Default";
-export default function Budaya() {
+import Navbar from "../../component/navbar/Navbar";
+import Footer from "../../component/footer/Footer";
+
+function Budaya() {
   return (
     <>
-      <Default>
-        <h1>Ini Budaya Page</h1>
-      </Default>
+      <Navbar />
+      <h1>ini page budaya</h1>
+      <Footer />
     </>
   );
 }
+
+export default Budaya;
