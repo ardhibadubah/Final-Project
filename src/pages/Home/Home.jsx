@@ -1,12 +1,12 @@
 import React from "react";
-import Default from "../../layout/Default";
+// import { Link } from "react-router-dom";
+import Navbar from "../../component/navbar/Navbar";
 
 export default function Home() {
   return (
     <>
-      <Default>
-        <h1>Ini Home Page</h1>
-      </Default>
+      <Navbar />
+      <h1>Ini Home Page</h1>
     </>
   );
 }
