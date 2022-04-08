@@ -4,6 +4,7 @@ import { Container, Spinner } from "react-bootstrap";
 import { CardHorizontal } from "../../component";
 import Default from "../../layout/Default";
 
+
 export default function Wisata() {
   const [isLoading, setIsLoading] = useState(true);
   const [dataWisata, setDataWisata] = useState(null);
