@@ -1,15 +1,15 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
-import { CardHorizontal } from "../../component";
-import Default from "../../layout/Default";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
+import { CardHorizontal } from '../../component';
+import Default from '../../layout/Default';
 
 export default function Wisata() {
   const [isLoading, setIsLoading] = useState(true);
   const [dataWisata, setDataWisata] = useState(null);
   useEffect(() => {
     axios({
-      method: "get",
+      method: 'get',
       url: `${process.env.REACT_APP_BASE_URL}/wisata`,
     })
       .then((response) => {
