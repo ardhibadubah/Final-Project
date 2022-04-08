@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../component/navbar/Navbar";
 import CardProduct from "../../component/kuliner/cardProduct";
 import CartListItem from "../../component/kuliner/carListItem";
 import menu from "./kuliner-data";
@@ -110,6 +109,9 @@ export default function Kuliner() {
                     currency: "USD",
                   }).format(total)}
                 </li>
+                <button type="button" className="btn btn-success w-100">
+                  Pesan Sekarang
+                </button>
               </ol>
             </div>
           </div>
