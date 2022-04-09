@@ -26,19 +26,19 @@ const Footer = () => {
             <Col xs="2">
               <div className="d-flex flex-column">
                 <h6>Menu</h6>
-                <Link className="text-decoration-none text-green" to="/">
+                <Link className="text-decoration-none text-white" to="/">
                   Home
                 </Link>
-                <Link className="text-decoration-none text-green" to="/wisata">
+                <Link className="text-decoration-none text-white" to="/wisata">
                   Wisata
                 </Link>
-                <Link className="text-decoration-none text-green" to="/budaya">
+                <Link className="text-decoration-none text-white" to="/budaya">
                   Budaya
                 </Link>
-                <Link className="text-decoration-none text-green" to="/kuliner">
+                <Link className="text-decoration-none text-white" to="/kuliner">
                   Kuliner
                 </Link>
-                <Link className="text-decoration-none text-green" to="/explore">
+                <Link className="text-decoration-none text-white" to="/explore">
                   Explore
                 </Link>
               </div>
@@ -54,7 +54,6 @@ const Footer = () => {
                   Promosi Kuliner
                 </Link>
                 <Link className="text-decoration-none text-white" to="/promosievent">
-
                   Promosi Event
                 </Link>
               </div>
@@ -64,10 +63,9 @@ const Footer = () => {
                 <h6>Layanan Kami</h6>
 
                 <Link className="text-decoration-none text-white" to="/informationcenter">
-
                   Information Center
                 </Link>
-                <Link className="text-decoration-none text-green" to="/form">
+                <Link className="text-decoration-none text-white" to="/form">
                   Form
                 </Link>
               </div>
@@ -78,7 +76,6 @@ const Footer = () => {
 
       <div className="bg-primary">
         <p className="text-center text-white py-3 mb-0">CopyRight 2022 Reserved Visit Sumbawa Island</p>
-
       </div>
     </>
   );
