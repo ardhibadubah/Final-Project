@@ -27,44 +27,62 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
-        <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+      <nav className='navbar'>
+        <div className='navbar-container'>
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             VSI
-            <i className="bi bi-sunrise-fill" />
+            <i className='bi bi-sunrise-fill' />
           </Link>
-          <div className="menu-icon" onClick={handleClick}>
-            <i className={click ? "bi bi-layout-text-sidebar" : "bi bi-layout-text-sidebar"} />
+          <div className='menu-icon' onClick={handleClick}>
+            <i
+              className={
+                click
+                  ? "bi bi-layout-text-sidebar"
+                  : "bi bi-layout-text-sidebar"
+              }
+            />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+            <li className='nav-item'>
+              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/wisata" className="nav-links" onClick={closeMobileMenu}>
+            <li className='nav-item'>
+              <Link
+                to='/wisata'
+                className='nav-links'
+                onClick={closeMobileMenu}>
                 Wisata
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/budaya" className="nav-links" onClick={closeMobileMenu}>
+            <li className='nav-item'>
+              <Link
+                to='/budaya'
+                className='nav-links'
+                onClick={closeMobileMenu}>
                 Budaya
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/kuliner" className="nav-links" onClick={closeMobileMenu}>
+            <li className='nav-item'>
+              <Link
+                to='/kuliner'
+                className='nav-links'
+                onClick={closeMobileMenu}>
                 Kuliner
               </Link>
             </li>
 
             <li>
-              <Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu}>
+              <Link
+                to='/sign-up'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}>
                 Sign Up
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">SIGN UP</Button>}
+          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
         </div>
       </nav>
       {/* <header className="p-3 mb-4 bg-success text-white">
@@ -73,25 +91,25 @@ function Navbar() {
             <Link to="/landingPage" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
               <img className="Logo-sumbawa" src={logo} alt="logo" />
             </Link>
-            <div id="navItem">
-              <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <div id='navItem'>
+              <ul className='nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0'>
                 <li>
-                  <Link to="/" className="nav-link px-2 text-white">
+                  <Link to='/' className='nav-link px-2 text-white'>
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/wisata" className="nav-link px-2 text-white">
+                  <Link to='/wisata' className='nav-link px-2 text-white'>
                     Wisata
                   </Link>
                 </li>
                 <li>
-                  <Link to="/kuliner" className="nav-link px-2 text-white">
+                  <Link to='/kuliner' className='nav-link px-2 text-white'>
                     Kuliner
                   </Link>
                 </li>
                 <li>
-                  <Link to="/budaya" className="nav-link px-2 text-white">
+                  <Link to='/budaya' className='nav-link px-2 text-white'>
                     Budaya
                   </Link>
                 </li>

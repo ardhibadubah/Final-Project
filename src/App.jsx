@@ -10,13 +10,13 @@ import Details from "./pages/Details";
 function App() {
   return (
     <Routes>
-      <Route path="/LandingPage" element={<LandingPage />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/Wisata" element={<Wisata />} />
-      <Route path="/Wisata/:wisataId" element={<Details />} />
-      <Route path="/Budaya" element={<Budaya />} />
-      <Route path="/Kuliner" element={<Kuliner />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path='/LandingPage' element={<LandingPage />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/Wisata' element={<Wisata />} />
+      <Route path='/Wisata/:wisataId' element={<Details />} />
+      <Route path='/Budaya' element={<Budaya />} />
+      <Route path='/Kuliner' element={<Kuliner />} />
+      <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }
