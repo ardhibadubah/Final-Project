@@ -39,8 +39,7 @@ export default function Wisata() {
               Search
             </button>
           </form>
-        </div>
-
+        </div>{' '}
         <Container>
           {loading ? (
             <div className='w-100 vh-100 d-flex justify-content-center align-items-center'>

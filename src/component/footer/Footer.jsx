@@ -1,87 +1,101 @@
 import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/image/LogoSumbawa1.png";
+import "./Footer.css";
 
-import logo from "../../component/Logo.png";
-
-import { AiOutlineMail, AiOutlineInstagram } from "react-icons/ai";
-import { BsPhone } from "react-icons/bs";
-
-const Footer = () => {
+function Footer() {
   return (
     <>
-      <div className="bg-success text-white py-5">
-        <Container>
-          <Row>
-            <Col xs="6">
-              <Image src={logo} style={{ width: "100px", height: "100px", objectFit: "cover" }} />
+      <p className="mt-5" style={{ width: "100%", height: "10px", marginLeft: "auto", marginRight: "auto", backgroundColor: "#f1d00a", border: " 0 none" }} />
 
-              <p>Mengenal wisata yang ada di Pulau Sumbawa</p>
-              <p>Contact Center :+6281353355475</p>
-              <p>Email:Incredibleicarus03@gmail.com</p>
-              <AiOutlineMail />
-              <BsPhone />
-              <AiOutlineInstagram />
-            </Col>
-            <Col xs="2">
-              <div className="d-flex flex-column">
-                <h6>Menu</h6>
-                <Link className="text-decoration-none text-green" to="/">
-                  Home
+      <section id="footer">
+        <div className="container-fluid" style={{ backgroundColor: "#3e497a", marginTop: "-20px" }}>
+          <div className="container">
+            <div className="row pt-5 justify-content-center">
+              <div className="col-md-3 col-6">
+                <img src={Logo} alt="" className="img-fluid" style={{ width: "200px" }} />
+                <br /> <br />
+                <Link to={"/"}>
+                  <p>Mengenal wisata yang ada di pulau Sumbawa.</p>
                 </Link>
-                <Link className="text-decoration-none text-green" to="/wisata">
-                  Wisata
+                <Link to={""}>
+                  <p>Whatsapp contact : +62 823-4005-1783</p>
                 </Link>
-                <Link className="text-decoration-none text-green" to="/budaya">
-                  Budaya
-                </Link>
-                <Link className="text-decoration-none text-green" to="/kuliner">
-                  Kuliner
-                </Link>
-                <Link className="text-decoration-none text-green" to="/explore">
-                  Explore
+                <Link to={""}>
+                  <p>Email : visitsumbawaisland@mail.com</p>
                 </Link>
               </div>
-            </Col>
-            <Col xs="2">
-              <div className="d-flex flex-column">
-                <h6>Website Terkait</h6>
-
-                <Link className="text-decoration-none text-white" to="/promosiwisata">
-                  Promosi Wisata
+              <div className="col-md-2 col-4 offset-md-1 offset-2">
+                <h2>Menu</h2>
+                <Link to={"/"}>
+                  <p>Home</p>
                 </Link>
-                <Link className="text-decoration-none text-white" to="/promosikuliner">
-                  Promosi Kuliner
+                <Link to={"/Wisata"}>
+                  <p>Wisata</p>
                 </Link>
-                <Link className="text-decoration-none text-white" to="/promosievent">
-
-                  Promosi Event
+                <Link to={"/Budaya"}>
+                  <p>Budaya</p>
                 </Link>
-              </div>
-            </Col>
-            <Col xs="2">
-              <div className="d-flex flex-column">
-                <h6>Layanan Kami</h6>
-
-                <Link className="text-decoration-none text-white" to="/informationcenter">
-
-                  Information Center
+                <Link to={"/Kuliner"}>
+                  <p>Kuliner</p>
                 </Link>
-                <Link className="text-decoration-none text-green" to="/form">
-                  Form
+                <Link to={""}>
+                  <p>About Us</p>
                 </Link>
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+              <div className="col-md-3 col-6 mt-4 mt-md-0">
+                <h2>Website Terkait</h2>
+                <Link to={""}>
+                  <p>Promosi Wisata</p>
+                </Link>
+                <Link to={""}>
+                  <p>Promosi Kuliner</p>
+                </Link>
+                <Link to={""}>
+                  <p>Promosi Event</p>
+                </Link>
+              </div>
+              <div className="col-md-3 col-6 mt-4 mt-md-0">
+                <h2>Layanan Kami</h2>
+                <Link to={""}>
+                  <p>Information Center</p>
+                </Link>
+                <Link to={""}>
+                  <p>Forum</p>
+                </Link>
+              </div>
+            </div>
+            <div className="row py-3">
+              <div className="col">
+                <h3>
+                  <Link to={""}>
+                    <i className="bi bi-facebook"></i>
+                  </Link>
+                  <Link to={""}>
+                    &nbsp;<i class="bi bi-instagram"></i>
+                  </Link>
+                  <Link to={""}>
+                    {" "}
+                    &nbsp;<i className="bi bi-envelope"></i>
+                  </Link>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="bg-primary">
-        <p className="text-center text-white py-3 mb-0">CopyRight 2022 Reserved Visit Sumbawa Island</p>
-
-      </div>
+      <section id="ending">
+        <div className="container-fluid" style={{ backgroundColor: "#21325e" }}>
+          <div className="container">
+            <div className="row py-3 text-center">
+              <td className="align-middle text-white">Copyright 2022 All Rights Reserved Visit Sumbawa Island</td>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
-};
+}
 
 export default Footer;
