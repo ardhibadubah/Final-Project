@@ -1,8 +1,20 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/image/LogoSumbawa1.png';
+import AuthModal from '../modal/AuthModal';
 import './Navbar.css';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
+  const [show, setShow] = useState(false);
+
+  const { displayName } = useSelector((state) => state.auth.currentUser);
+
+  console.log(displayName);
+
+  const handleOpenModal = () => {
+    setShow(true);
+  };
   return (
     <>
       <section id='navbarAll'>
@@ -47,17 +59,21 @@ function Navbar() {
 
               <ul className='navbar-nav ms-auto'>
                 <li className='nav-item mx-3'>
-                  <Link
-                    className='nav-link active'
-                    aria-current='page'
-                    to='/Sign-In'>
-                    Sign In&emsp;<i className='bi bi-person-circle fs-4'></i>
-                  </Link>
+                  {displayName ? (
+                    <p className='mb-0 text-light'>Hello, {displayName}</p>
+                  ) : (
+                    <button
+                      className='btn text-light'
+                      onClick={handleOpenModal}>
+                      Sign In
+                    </button>
+                  )}
                 </li>
               </ul>
             </div>
           </div>
         </nav>
+        <AuthModal show={show} setShow={setShow} />
       </section>
     </>
   );

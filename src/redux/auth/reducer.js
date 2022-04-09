@@ -1,9 +1,9 @@
-import { AUTH } from "../constant";
+import { AUTH } from '../constant';
 
 const initialState = {
-  currentUser: "",
+  currentUser: '',
   loading: false,
-  error: "",
+  error: '',
 };
 
 const authReducer = (state = initialState, action) => {
