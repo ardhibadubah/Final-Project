@@ -16,7 +16,6 @@ function App() {
       <Route path='/Wisata/:wisataId' element={<Details />} />
       <Route path='/Budaya' element={<Budaya />} />
       <Route path='/Kuliner' element={<Kuliner />} />
-      {/* <Route path='/Explore' element={<Explore />} /> */}
       <Route path='*' element={<NotFound />} />
     </Routes>
   );
