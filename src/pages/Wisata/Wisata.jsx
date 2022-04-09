@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Container, Spinner } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import { CardHorizontal } from '../../component';
 import Default from '../../layout/Default';
-import { useDispatch, useSelector } from 'react-redux';
 import { getWisata } from '../../redux/wisata/action';
 
 export default function Wisata() {
