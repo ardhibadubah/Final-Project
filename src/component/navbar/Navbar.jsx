@@ -1,49 +1,54 @@
 import { Link } from "react-router-dom";
-import React from "react";
-import logo from "../../component/Logo.png";
-import "./style.css";
+import Logo from "../../assets/image/LogoSumbawa1.png";
+import "./Navbar.css";
 
-export default function Navbar() {
+function Navbar() {
   return (
     <>
-      <header className="p-3 mb-4 bg-success text-white">
-        <div className="container">
-          <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <Link to="/landingPage" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-              <img className="Logo-sumbawa" src={logo} alt="logo" />
-            </Link>
-            <div id="navItem">
-              <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li>
-                  <Link to="/" className="nav-link px-2 text-white">
+      <section id="navbarAll">
+        <nav className="navbar navbar-expand-lg navbar-dark shadow-sm" style={{ backgroundColor: "#3e497a" }}>
+          <div className="container">
+            <img src={Logo} alt="" width="100" />
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ms-3">
+                <li className="nav-item mx-2">
+                  <Link className="nav-link" aria-current="page" to="/">
                     Home
                   </Link>
                 </li>
-                <li>
-                  <Link to="/wisata" className="nav-link px-2 text-white">
+                <li className="nav-item mx-2">
+                  <Link className="nav-link" to="/Wisata">
                     Wisata
                   </Link>
                 </li>
-                <li>
-                  <Link to="/kuliner" className="nav-link px-2 text-white">
+                <li className="nav-item mx-2">
+                  <Link className="nav-link" to="/Kuliner">
                     Kuliner
                   </Link>
                 </li>
-                <li>
-                  <Link to="/budaya" className="nav-link px-2 text-white">
+                <li className="nav-item mx-2">
+                  <Link className="nav-link" to="/Budaya">
                     Budaya
                   </Link>
                 </li>
-                <li>
-                  <Link to="/explore" className="nav-link px-2 text-white">
-                    Explore
+              </ul>
+
+              <ul className="navbar-nav ms-auto">
+                <li className="nav-item mx-3">
+                  <Link className="nav-link active" aria-current="page" to="/Sign-In">
+                    Sign In&emsp;<i className="bi bi-person-circle fs-4"></i>
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
-        </div>
-      </header>
+        </nav>
+      </section>
     </>
   );
 }
+
+export default Navbar;
