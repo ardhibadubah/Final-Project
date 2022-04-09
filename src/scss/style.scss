@@ -8,7 +8,7 @@
 // scss-docs-start import-s~bootstrap/scss/tack
 // Configuration
 @import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
+@import './custom/custom_variables';
 @import '~bootstrap/scss/mixins';
 @import '~bootstrap/scss/utilities';
 
@@ -51,3 +51,6 @@
 // Utilities
 @import '~bootstrap/scss/utilities/api';
 // scss-docs-end import-s~bootstrap/scss/tack
+
+// Custom style
+@import './components/CardProduct.scss';

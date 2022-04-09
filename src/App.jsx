@@ -7,6 +7,7 @@ import LandingPage from './pages/Landing-page/LandingPage';
 import NotFound from './pages/NotFound/NotFound';
 import ScrollToTop from './helpers/ScrollToTop';
 import DetailsContent from './pages/DetailsContent';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/LandingPage' element={<LandingPage />} />
         <Route path='/' element={<Home />} />
+        <Route path='/login' element={<LoginPage />} />
         <Route path='/Wisata' element={<Wisata />} />
         <Route path='/Wisata/:wisataId' element={<DetailsContent />} />
         <Route path='/Budaya' element={<Budaya />} />
