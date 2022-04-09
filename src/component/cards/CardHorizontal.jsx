@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CardHorizontal = (props) => {
   const { data } = props;
@@ -7,9 +8,10 @@ const CardHorizontal = (props) => {
     <>
       {data &&
         data.map((item, idx) => (
-          <div
+          <Link
+            to={item.id}
             key={`cardWisata-${idx}`}
-            className='card mb-3 shadow'
+            className='card mb-3 shadow text-decoration-none text-dark'
             style={{ width: "800px" }}>
             <div className='row g-0'>
               <div className='col-md-4'>
@@ -31,7 +33,7 @@ const CardHorizontal = (props) => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
     </>
   );
