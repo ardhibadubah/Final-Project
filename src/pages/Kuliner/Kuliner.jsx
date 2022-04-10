@@ -71,14 +71,14 @@ export default function Kuliner() {
             </div>
           </div>
         </div>
-        <div className="container">
+        {/* <div className="container">
           <form className="d-flex">
             <input className="form-control me-5 rounded" type="search" placeholder="Search" aria-label="Search" />
             <button className="btn btn-outline-success" type="submit">
               Search
             </button>
           </form>
-        </div>
+        </div> */}
 
         <div className="container py-5">
           <div className="row">
