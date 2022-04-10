@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
+import { FcGoogle } from 'react-icons/fc';
+import { ImFacebook } from 'react-icons/im';
 import {
   loginWithEmail,
   loginWithFacebook,
@@ -35,7 +37,7 @@ const AuthModal = ({ show, setShow }) => {
         keyboard={false}
         centered>
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title className='ms-5'>Sign In</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className='w-100 d-flex flex-column justify-content-center align-items-center'>
@@ -56,7 +58,7 @@ const AuthModal = ({ show, setShow }) => {
                 </Form.Text>
               </Form.Group>
 
-              <Form.Group className='mb-3' controlId='formBasicPassword'>
+              <Form.Group className='mb-4' controlId='formBasicPassword'>
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   className='w-100'
@@ -70,22 +72,26 @@ const AuthModal = ({ show, setShow }) => {
               <Button
                 style={{ width: '400px' }}
                 className='w-100 mb-3'
-                variant='primary'
+                variant='outline-primary'
                 type='submit'>
-                Submit
+                Login
               </Button>
             </Form>
             <Button
               style={{ width: '400px' }}
-              className='mb-3'
+              variant='light'
+              className='text-dark mb-3'
               onClick={handleLoginGoogle}>
-              login with google
+              <FcGoogle className='me-3 mb-1' />
+              Login with Google
             </Button>
             <Button
               style={{ width: '400px' }}
               className='mb-3'
+              variant='light'
               onClick={handleLoginFacebook}>
-              login with Facebook
+              <ImFacebook className='me-3 mb-1 text-primary' />
+              Login with Facebook
             </Button>
           </div>
         </Modal.Body>

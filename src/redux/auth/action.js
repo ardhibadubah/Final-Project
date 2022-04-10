@@ -3,6 +3,7 @@ import {
   GoogleAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
 } from 'firebase/auth';
 import swal from 'sweetalert';
 import auth from '../../config/firebase';
@@ -141,4 +142,20 @@ export const loginWithFacebook = () => (dispatch) => {
         reject(errorCode);
       });
   });
+};
+
+export const clearCurrentUser = () => (dispatch) => {
+  signOut(auth)
+    .then(() => {
+      // Sign-out successful.
+      dispatch({
+        type: AUTH.SIGN_OUT,
+      });
+
+      swal('Good Bye!', 'Sign Out Success!', 'success');
+    })
+    .catch((error) => {
+      // An error happened.
+      swal('Something was wrong!', error.message, 'error');
+    });
 };

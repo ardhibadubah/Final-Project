@@ -3,18 +3,25 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/image/LogoSumbawa1.png';
 import AuthModal from '../modal/AuthModal';
 import './Navbar.css';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { Dropdown } from 'react-bootstrap';
+import { CustomToggle } from '../dropdown/AvatarDropdown';
+import { clearCurrentUser } from '../../redux/auth/action';
 
 function Navbar() {
   const [show, setShow] = useState(false);
+  const dispatch = useDispatch();
 
   const { displayName } = useSelector((state) => state.auth.currentUser);
-
-  console.log(displayName);
 
   const handleOpenModal = () => {
     setShow(true);
   };
+
+  const handleSignOut = () => {
+    dispatch(clearCurrentUser());
+  };
+
   return (
     <>
       <section id='navbarAll'>
@@ -36,22 +43,25 @@ function Navbar() {
             <div className='collapse navbar-collapse' id='navbarNav'>
               <ul className='navbar-nav ms-3'>
                 <li className='nav-item mx-2'>
-                  <Link className='nav-link' aria-current='page' to='/'>
+                  <Link
+                    className='navbar-link nav-link'
+                    aria-current='page'
+                    to='/'>
                     Home
                   </Link>
                 </li>
                 <li className='nav-item mx-2'>
-                  <Link className='nav-link' to='/Wisata'>
+                  <Link className='navbar-link nav-link' to='/Wisata'>
                     Wisata
                   </Link>
                 </li>
                 <li className='nav-item mx-2'>
-                  <Link className='nav-link' to='/Kuliner'>
+                  <Link className='navbar-link nav-link' to='/Kuliner'>
                     Kuliner
                   </Link>
                 </li>
                 <li className='nav-item mx-2'>
-                  <Link className='nav-link' to='/Budaya'>
+                  <Link className='navbar-link nav-link' to='/Budaya'>
                     Budaya
                   </Link>
                 </li>
@@ -60,7 +70,19 @@ function Navbar() {
               <ul className='navbar-nav ms-auto'>
                 <li className='nav-item mx-3'>
                   {displayName ? (
-                    <p className='mb-0 text-light'>Hello, {displayName}</p>
+                    <Dropdown>
+                      <Dropdown.Toggle
+                        as={CustomToggle}
+                        id='dropdown-custom-components'>
+                        {`Hallo, ${displayName}`}
+                      </Dropdown.Toggle>
+
+                      <Dropdown.Menu className='w-100'>
+                        <Dropdown.Item onClick={handleSignOut}>
+                          Sign Out
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
                   ) : (
                     <button
                       className='btn text-light'
